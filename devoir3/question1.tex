@@ -1,0 +1,39 @@
+\section*{2.8}
+%\addcontentsline{toc}{section}{Question 1}
+
+Ceci est un problème de refroidissement de Newton. La température ambiante fixe
+est celle de l'air dehors qui est à $-15$. Le millieu qui se refroidit est la
+température à l'intérieur de la chambre. On pose les conditions initiales
+suivantes :
+\begin{align*}
+    T(0) = 20,\quad T(1) = 16,\quad T_A = -15
+\end{align*}
+
+La solution à l'équation différientielle qui régit ce phénomène est :
+\begin{align*}
+    T(t) = T_A +Ce^{kt}
+\end{align*}
+
+On calcule la valeur de $C$ :
+\begin{gather*}
+    T(0) = 20 = -15 +Ce^{0} \\
+    C = 35
+\end{gather*}
+
+On calcule la valeur de $k$ :
+\begin{align*}
+    T(1) = 16 &= -15 +35e^{k} \\
+    35e^k &= 31 \\
+    e^k &= \f{31}{35} \\
+    k &= \ln\prt{\f{31}{35}} = -0.121
+\end{align*}
+
+La fonction de température est donc :
+\begin{align*}
+    T(t) = -15 + 35e^{-0.121t}
+\end{align*}
+
+À 5h le matin, la température est :
+\begin{align*}
+    T(6) = -15 + 35e^{-0.121\cdot 6} = 1.898
+\end{align*}
