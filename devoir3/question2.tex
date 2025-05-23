@@ -1,0 +1,43 @@
+\section*{2.37}
+%\addcontentsline{toc}{section}{Question 1}
+
+e) L'EDO initiale est :
+\begin{align*}
+    \sqrt{1 + x^3}\ \dv{y}{x} = x^2 y + x^2
+\end{align*}
+
+En factorisant par $x^2$, on voit que l'équation est à variables séparables :
+\begin{align*}
+    \sqrt{1 + x^3}\ \dv{y}{x} &= x^2(y + 1) \\
+    \f{1}{y+1}\dv{y}{x} &= \f{x^2}{\sqrt{1 + x^3}}
+\end{align*}
+
+L'équation est aussi une équation linéaire :
+\begin{align*}
+    \sqrt{1 + x^3}\ \dv{y}{x} -x^2 y &= x^2 \\
+    \dv{y}{x} -\f{x^2}{\sqrt{1 + x^3}}y &= \f{x^2}{\sqrt{1 + x^3}}
+\end{align*}
+
+On résout l'équation à variables séparables :
+\begin{align*}
+    \int{\f{1}{y+1}\ dy} &= \int{\f{x^2}{\sqrt{1 + x^3}}\ dx} \\
+    \ln(y+1) &= \int{\f{x^2}{\sqrt{1 + x^3}}\ dx} +C \\
+\end{align*}
+
+On pose :
+\begin{align*}
+    u = 1+x^3,\quad du = 3x^2\ dx,\quad x^2\ dx = \f{1}{3}\ du
+\end{align*}
+
+L'intégrale devient :
+\begin{align*}
+    \int{\f{x^2}{\sqrt{1 + x^3}}\ dx} &= \f{1}{3}\int{\f{1}{\sqrt{u}}\ du} =
+    \f{2}{3}\sqrt{u} = \f{2}{3}\sqrt{1+x^3}\\
+\end{align*}
+
+Donc :
+\begin{align*}
+    \ln(y+1) &= \f{2}{3}\sqrt{1+x^3} +C \\
+    y+1 &= C_1 e^{\frac{2}{3}\sqrt{1+x^3}} \\
+    y &= C_1 e^{\frac{2}{3}\sqrt{1+x^3}} - 1
+\end{align*}
