@@ -1,0 +1,20 @@
+\section*{1.10}
+%\addcontentsline{toc}{section}{Question 1}
+
+e) On tente de résoudre :
+\begin{align*}
+    \dfrac{d^2x}{dt^2} &= e^t - e^{-t}
+\end{align*}
+
+C'est une équation directement intégrable 2 fois. Ceci va générer une famille
+de fonctions avec 2 constantes essentielles :
+\begin{align*}
+    \dfrac{dx}{dt} &= \int{\left(e^t - e^{-t}\right)\ dt} \\
+    &= e^t +e^{-t} + C_1
+\end{align*}
+
+La deuxième intégration donne la solution finale :
+\begin{align*}
+    x(t) &= \int{\left(e^t + e^{-t} + C_1\right)\ dt} \\
+    &= e^t -e^{-t} + C_1t + C_2
+\end{align*}

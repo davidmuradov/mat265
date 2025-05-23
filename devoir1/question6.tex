@@ -1,0 +1,30 @@
+\section*{1.2}
+%\addcontentsline{toc}{section}{Question 1}
+
+Soit $r$ la longueur d'une arête. L'aire d'une des faces est $r^2$. Étant donné
+que la longueur des arêtes décroit à un taux égal à l'aire d'une face, on déduit
+l'équation différientielle suivante :
+\begin{align*}
+    \dfrac{dr}{dt} &= -r^2
+\end{align*}
+
+C'est une équation à variables séparables. On la résout avec la condition
+initiale $r(0)=1$ :
+\begin{align*}
+    \dfrac{dr}{dt} &= -r^2 \\
+    -\int{r^{-2}\ dr} &= \int{1\ dt} \\
+    r^{-1} &= t + C \\
+    r &= \dfrac{1}{t+C}
+\end{align*}
+
+On calcule la valeur de $C$ :
+\begin{align*}
+    r(0) = 1 &= \dfrac{1}{1+C} \\
+    C &= 1 \\
+    \implies r(t) &= \dfrac{1}{t+1}
+\end{align*}
+
+Le volume du cube $V(t)$ pour tout $t$ est alors :
+\begin{align*}
+    V(t) = \dfrac{1}{(t+1)^3}
+\end{align*}

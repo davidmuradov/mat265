@@ -1,0 +1,62 @@
+\section*{1.1}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) On tente de résoudre :
+\begin{align*}
+    y' + y &= x
+\end{align*}
+
+C'est une équation linéaire d'ordre 1 qu'on peut résoudre avec un facteur
+intégrant. On pose les paramètres suivants :
+\begin{align*}
+    P(x) = 1,\quad Q(x) = x,\quad \mu(x) = e^{\int{P(x)dx}} =
+    e^{x}
+\end{align*}
+
+La solution générale est :
+\begin{align*}
+    \varphi(x) &= Ce^{-x} + e^{-x}\int{xe^{x}\ dx} \\
+    \varphi(x) &= Ce^{-x} + e^{-x}(xe^{x} - e^x) \\
+    \varphi(x) &= Ce^{-x} + x - 1
+\end{align*}
+
+On cherche à trouver la solution particulière avec $\varphi(0) = 1$ :
+\begin{align*}
+    \varphi(0) = 1 &= Ce^{0} + 0 - 1 \\
+    1 &= C - 1 \\
+    C &= 2
+\end{align*}
+
+La solution particulière est :
+\begin{align*}
+    \varphi(x) &= 2e^{-x} + x - 1 \\
+\end{align*}
+
+
+b) On tente de résoudre :
+\begin{align*}
+    y' &= \dfrac{1}{2xy +2y -x -1}
+\end{align*}
+
+C'est une équation à variable séparable. Pour le voir, on procède avec quelques
+factorisations :
+\begin{align*}
+    y' &= \dfrac{1}{2xy +2y -x -1} \\
+    &= \dfrac{1}{2y(x + 1) -(x +1)} \\
+    &= \dfrac{1}{(x+1)(2y-1)}
+\end{align*}
+
+L'équation à résoudre est donc :
+\begin{align*}
+    \int{(2y-1)\ dy} &= \int{\dfrac{1}{x+1}\ dx} \\
+    y^2 -y &= \ln(|x+1|) + C \\
+    y(y-1) &= \ln(|x+1|) + C
+\end{align*}
+
+En posant $y(0)=1$, on trouve la solution particulière :
+\begin{align*}
+    1(1-1) &= \ln(1) + C \\
+    C &= 0 \\
+    \implies 
+    y(y-1) &= \ln(|x+1|)
+\end{align*}

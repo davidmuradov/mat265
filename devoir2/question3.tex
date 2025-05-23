@@ -1,0 +1,26 @@
+\section*{2.29}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) On tente de résoudre :
+\begin{align*}
+    \dfrac{dx}{dt} &= \dfrac{x}{t} + \dfrac{t}{x} =
+    \dfrac{x}{t} + \paren{\dfrac{x}{t}}^{-1}
+\end{align*}
+
+Sous cette forme, on voit que c'est une équation homogène de la forme :
+\begin{align*}
+    x' = F\paren{\dfrac{x}{t}}
+\end{align*}
+
+L'EDO à résoudre est donc :
+\begin{align*}
+    v't + v = v +\dfrac{1}{v} \iff v't = \dfrac{1}{v}
+\end{align*}
+
+C'est une équation à variables séparables :
+\begin{align*}
+    \int{v\ dv} &= \int{\dfrac{1}{t}\ dt} \\
+    \dfrac{1}{2}v^2 &= \ln(t) + C \\
+    \dfrac{x^2}{t^2} &= 2\ln(t) + C_1 \\
+    x^2 &= 2t^2\ln(t) + C_1t^2
+\end{align*}

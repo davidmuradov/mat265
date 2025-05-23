@@ -1,0 +1,49 @@
+\section*{2.13}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) On tente de résoudre :
+\begin{align*}
+    y' -2y &= 4\cos(3x)
+\end{align*}
+
+C'est une équation linéaire d'ordre 1 qu'on peut résoudre avec un facteur
+intégrant. On pose les paramètres suivants :
+\begin{align*}
+    P(x) = -2,\quad Q(x) = 4\cos(3x),\quad \mu(x) = e^{\int{P(x)dx}} =
+    e^{-2x}
+\end{align*}
+
+La solution générale est :
+\begin{align*}
+    \varphi(x) = Ce^{2x} + \dfrac{4}{e^{-2x}}\int{e^{-2x}\cos(3x)\ dx}
+\end{align*}
+
+La dernière intégrale se résout avec une intégration par partie. On utilise la
+méthode tabulaire :
+\begin{table}[H]
+    \centering
+    %\caption{Mesures de tensions et de courants ainsi que le calcul du gain selon le courant $I_{\text{B}}$}
+    \begin{tabular}{rrr}
+	\toprule[1pt]
+	 & D & I \\
+	\midrule
+	+ & $\cos(3x)$ & $e^{-2x}$\vspace{1mm}\\
+	- & $-3\sin(3x)$ & $-\dfrac{1}{2}e^{-2x}$\vspace{2mm}\\
+	+ & $-9\cos(3x)$ & $\dfrac{1}{4}e^{-2x}$\vspace{2mm}\\
+	\bottomrule[1pt]
+    \end{tabular}
+\end{table}
+
+D'ici on déduit que :
+\begin{align*}
+    \int{e^{-2x}\cos(3x)\ dx} &= -\dfrac{1}{2}\cos(3x)e^{-2x} 
+    +\dfrac{3}{4}\sin(3x)e^{-2x} -\dfrac{9}{4}\int{e^{-2x}\cos(3x)\ dx} \\
+    \int{e^{-2x}\cos(3x)\ dx} &= -\dfrac{2}{13}\cos(3x)e^{-2x} 
+    +\dfrac{3}{13}\sin(3x)e^{-2x}
+\end{align*}
+
+En insérant cette égalité dans la solution générale, on trouve l'expression
+finale :
+\begin{align*}
+    \varphi(x) = Ce^{2x} - \dfrac{8}{13}\cos(3x) + \dfrac{12}{13}\sin(3x)
+\end{align*}

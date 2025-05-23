@@ -1,0 +1,33 @@
+\section*{2.30}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) On tente de résoudre :
+\begin{align*}
+    x' &= 3x^2 e^t - x \iff x' + x =3e^t x^2
+\end{align*}
+
+C'est une équation de Bernoulli avec $n = 2$. On pose :
+\begin{align*}
+    p(t) = 1,\quad q(t) = 3e^t,\quad v = x^{-1}
+\end{align*}
+
+L'EDO à résoudre est :
+\begin{align*}
+    v' - v = -3e^t
+\end{align*}
+
+C'est une équation linéaire d'ordre 1 qui a pour facteur intégrant :
+\begin{align*}
+    \mu(t) = e^{\int{-1\ dt}} = e^{-t}
+\end{align*}
+
+La solution à cette équation est :
+\begin{align*}
+    v = Ce^t + e^t\int{-3e^{-t}e^t\ dt} = Ce^t -3te^t = e^t(C - 3t)
+\end{align*}
+
+On trouve la solution finale :
+\begin{align*}
+    v = \dfrac{1}{x} &= e^t(C - 3t) \\
+    x(t) &= \dfrac{1}{e^t(C-3t)}
+\end{align*}

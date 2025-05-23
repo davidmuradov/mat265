@@ -1,0 +1,11 @@
+exos.pdf
+table_derives.pdf
+mat265V1.pdf
+mat265V2.pdf
+*.aux
+*.log
+devoir1/EH_semaine_1A_1.pdf
+*.fdb*
+*.fls
+*.synctex*
+*.gz

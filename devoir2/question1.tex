@@ -1,0 +1,49 @@
+\section*{2.24}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) On tente de résoudre l'équation suivante :
+\begin{align*}
+    (y\ln(y) +ye^x)\ dx + (x + y\cos(y))\ dy = 0
+\end{align*}
+
+On pose :
+\begin{align*}
+    M(x,y) = y\ln(y) +ye^x,\quad N(x,y) = x + y\cos(y)
+\end{align*}
+
+On vérifie si cette équation est exacte :
+\begin{align*}
+    \dmy = \ln(y) + 1 + e^x,\quad \dnx = 1
+\end{align*}
+
+L'équation n'est pas exacte car les deux dérivées partielles ne sont pas
+équivalentes. On calcule donc le terme suivant :
+\begin{align*}
+    \dfrac{1}{M}\left(\dmy - \dnx \right) = \dfrac{\ln(y)+e^x}{y(\ln(y)+e^x)}
+    = \dfrac{1}{y} = g(y)
+\end{align*}
+
+Puisque ce terme est une expression qui ne dépend que de $y$ on peut trouver un
+facteur intégrant qui rend l'équation différentielle exacte. Ce terme est :
+\begin{align*}
+    \mu(y) = e^{\int{-g(y)}\ dy} = \dfrac{1}{y}
+\end{align*}
+
+La nouvelle équation exacte est :
+\begin{gather*}
+    \dfrac{1}{y}\cdot M(x,y) + \dfrac{1}{y}\cdot N(x,y) = 0 \\
+    (\ln(y) +e^x)\ dx + \left(\dfrac{x}{y} + \cos(y)\right)\ dy = 0
+\end{gather*}
+
+On pose les deux équations suivantes :
+\begin{align*}
+    V(x,y) &= \int{(\ln(y) +e^x)\ dx} = x\ln(y) +e^x +A(y) \\
+    V(x,y) &= \int{\left(\dfrac{x}{y} +\cos(y)\right)\ dy} =
+    x\ln(y) +\sin(y) +B(x)
+\end{align*}
+
+On en déduit que $A(y) = \sin(y)$ et que $B(x) = e^x$ et que la solution finale
+est :
+\begin{align*}
+    V(x,y) = x\ln(y) +e^x +\sin(y) = C
+\end{align*}
