@@ -41,3 +41,101 @@ Donc :
     y+1 &= C_1 e^{\frac{2}{3}\sqrt{1+x^3}} \\
     y &= C_1 e^{\frac{2}{3}\sqrt{1+x^3}} - 1
 \end{align*}
+
+e) L'EDO initiale est :
+\begin{align*}
+    y' = x(x+y)
+\end{align*}
+
+C'est une équation linéaire d'ordre 1 :
+\begin{align*}
+    y' &= x^2+xy \\
+    y' -xy &= x^2
+\end{align*}
+
+On pose :
+\begin{align*}
+    P(x) = -x,\ Q(x) = x^2
+\end{align*}
+
+Le facteur intégrant est :
+\begin{align*}
+    \mu(x) = e^{\int{P(x)\ dx}} = e^{\int{-x\ dx}} = e^{-\frac{1}{2}x^2}
+\end{align*}
+
+La solution à l'équation différientielle est :
+\begin{align*}
+    y = Ce^{\frac{1}{2}x^2} + e^{\frac{1}{2}x^2}\int{x^2 e^{-\frac{1}{2}x^2}\ dx}
+\end{align*}
+
+Ceci est la solution donnée dans le manuel. L'intégrale non résolue ne s'exprime
+pas en termes de fonctions élémentaires, mais on peut quand même essayer de
+trouver une solution non triviale. On tente de résoudre l'intégrale :
+\begin{align*}
+    \int{x^2 e^{-\frac{1}{2}x^2}\ dx} = \int{x\cdot xe^{-\frac{1}{2}x^2}\ dx}
+\end{align*}
+
+On fait l'intégration par parties:
+\begin{table}[H]
+    \centering
+    %\caption{Mesures de tensions et de courants ainsi que le calcul du gain selon le courant $I_{\text{B}}$}
+    \begin{tabular}{rrr}
+	\toprule[1pt]
+	 & D & I \\
+	\midrule
+	+ & $x$ & $xe^{-\frac{1}{2}x^2}$\vspace{1mm}\\
+	- & $1$ & $-e^{-\frac{1}{2}x^2}$\vspace{2mm}\\
+	+ & $0$ & \vspace{2mm}\\
+	\bottomrule[1pt]
+    \end{tabular}
+\end{table}
+
+Pour compléter le tableau, il faut résoudre l'intégrale suivante :
+\begin{align*}
+    -\int{e^{-\frac{1}{2}x^2}\ dx}
+\end{align*}
+
+Étant donné le $x^2$ dans l'exponentielle, on s'attend à obtenir la fonction
+d'erreur de Gauss. On voudrait trouver une valeur $u$ telle que :
+\begin{align*}
+    u^2 &= \f{1}{2}x^2 \\
+    u &= \f{x}{\sqrt{2}}
+\end{align*}
+
+On utilise ce $u$ pour faire une substitution :
+\begin{align*}
+    du &= \f{dx}{\sqrt{2}},\ dx = \sqrt{2}\ du
+\end{align*}
+
+L'intégrale devient :
+\begin{align*}
+    -\int{e^{-\frac{1}{2}x^2}\ dx} &= -\sqrt{2}\int{e^{-u^2}\ du} \\
+    &= -\sqrt{2}\cdot\f{\sqrt{\pi}}{2}\cdot\f{2}{\sqrt{\pi}}\int{e^{-u^2}\ du} \\
+    &= -\sqrt{2}\cdot\f{\sqrt{\pi}}{2}\cdot\erf(u) \\
+    &= -\f{\sqrt{\pi}}{\sqrt{2}}\cdot\erf(u) \\
+    &= -\sqrt{\f{\pi}{2}}\erf(u) \\
+    &= -\sqrt{\f{\pi}{2}}\erf\prt{\f{x}{\sqrt{2}}}
+\end{align*}
+
+On complète le tableau d'intégration par parties :
+\begin{table}[H]
+    \centering
+    %\caption{Mesures de tensions et de courants ainsi que le calcul du gain selon le courant $I_{\text{B}}$}
+    \begin{tabular}{rrr}
+	\toprule[1pt]
+	 & D & I \\
+	\midrule
+	+ & $x$ & $xe^{-\frac{1}{2}x^2}$\vspace{1mm}\\
+	- & $1$ & $-e^{-\frac{1}{2}x^2}$\vspace{2mm}\\
+	+ & $0$ & $-\sqrt{\f{\pi}{2}}\erf\prt{\f{x}{\sqrt{2}}}$\vspace{2mm}\\
+	\bottomrule[1pt]
+    \end{tabular}
+\end{table}
+
+La solution finale est donc :
+\begin{align*}
+    y(x) &= Ce^{\frac{1}{2}x^2} + e^{\frac{1}{2}x^2}
+    \prt{-xe^{-\frac{1}{2}x^2} + \sqrt{\f{\pi}{2}}\erf\prt{\f{x}{\sqrt{2}}}} \\
+    &= Ce^{\frac{1}{2}x^2} 
+    -x + \sqrt{\f{\pi}{2}}\erf\prt{\f{x}{\sqrt{2}}}e^{\frac{1}{2}x^2} \\
+\end{align*}
