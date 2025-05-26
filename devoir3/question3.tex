@@ -1,0 +1,71 @@
+\section*{3.5}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) On pose les conditions initiales suivantes :
+\begin{align*}
+    g = 9.81,\ m = 90,\ v(0) = 50,\ x(0) = 0
+\end{align*}
+
+Le référentiel utilisé est celui où la position initiale du parachutiste est
+de 0 et pour lequel l'axe de mouvement rectiligne est orienté vers le centre
+de la terre (tout phénomène orienté vers le sol est considéré positif). Les deux
+forces qui agissent sur le parachutiste sont :
+\begin{align*}
+    F_1 = mg,\ F_2 = -20v^2
+\end{align*}
+
+La loi de Newton donne :
+\begin{align*}
+    \sum{F} &= mg - 20v^2 = m\dv{v}{t} \\
+    \iff v' &= g - \f{20}{m}v^2
+\end{align*}
+
+On utilise la TI pour trouver la solution de cette EDO. On tape la commande
+suivante pour obtenir directement $v(t)$ :
+\begin{align*}
+    \solve\prt{\desolve\prt{v'=g-\f{20}{m}\cdot v^2\ \text{and }
+    v(0)=50, t, v},v}
+\end{align*}
+
+On obtient alors deux solutions :
+\begin{align*}
+    v(t) = 6.644\cdot\f{19.163^t - 0.765}{19.163^t + 0.765}\ \text{ou }
+    v(t) = 6.644\cdot\f{19.163^t + 0.765}{19.163^t - 0.765}
+\end{align*}
+
+En posant $t=0$, on trouve que la solution qui donne la bonne vitesse initiale
+de 50 est :
+\begin{align*}
+    v(t) = 6.644\cdot\f{19.163^t + 0.765}{19.163^t - 0.765}
+\end{align*}
+
+b) Pour trouver la vitesse terminale, il suffit de prendre la limite quand $t$
+tend vers l'infini :
+\begin{align*}
+    \lim_{t\to\infty} v(t) &= \lim_{t\to\infty}
+    6.644\cdot\f{19.163^t + 0.765}{19.163^t - 0.765} \\
+    &= 6.644\cdot\lim_{t\to\infty}\f{19.163^t + 0.765}{19.163^t - 0.765} \\
+    &= 6.644\cdot\lim_{t\to\infty}\f{1 + \f{0.765}{19.163^t}}{1 - \f{0.765}{19.163^t}} \\
+    &= 6.644\cdot 1^+ \\
+    v_l&= 6.644
+\end{align*}
+
+c) Pour trouver le temps pour atterrir au sol, il faut résoudre l'EDO suivante :
+\begin{align*}
+    x'(t) = 6.644\cdot\f{19.163^t + 0.765}{19.163^t - 0.765}
+\end{align*}
+
+On utilise la TI pour la résoudre :
+\begin{align*}
+    \solve\prt{\desolve\prt{x'=6.644\cdot\f{19.163^t + 0.765}{19.163^t - 0.765}
+    \ \text{and } x(0)=0,t,x},x}
+\end{align*}
+
+Ensuite, il suffit de faire un solve pour $t$ sur le résultat obtenu pour $x=1500$.
+Puisque la calculatrice peut avoir des difficultés à trouver une solution, on lui
+donne une contrainte sur $t$. La contrainte a été trouvée par essais erreurs :
+\begin{align*}
+    \solve\prt{1500 = 4.5\cdot\ln(((4.378^t-0.874\cdots))),t}|\ t>200
+\end{align*}
+
+On obtient $t = 224.79$ secondes.
