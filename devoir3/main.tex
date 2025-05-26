@@ -19,10 +19,17 @@
 \usepackage{subcaption}
 %\usepackage{mathabx} % changes all math symbols, for some reason
 \usepackage{bigints}
-%\usepackage{pgfplots}
+\usepackage{pgfplots}
+\usepackage{pgfkeys}
+\usepackage{pgfmath}
+\usepackage{tikz}
 
 % Graph settings
-%\pgfplotsset{width=10cm,compat=1.9}
+\pgfplotsset{
+    height=10cm,
+    width=17cm,
+    compat=1.9,
+}
 
 % Reduce compilation time for graphs
 %\usepgfplotslibrary{external}
@@ -94,6 +101,6 @@ David Muradov\\[8cm]
 \input{question1.tex}
 \input{question2.tex}
 \input{question3.tex}
-%\input{question4.tex}
+\input{question4.tex}
 
 \end{document}
