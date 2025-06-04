@@ -1,0 +1,57 @@
+\section*{2.8}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) La forme générale du taux de variation de la quantité d'acide dans un
+contenant est :
+\begin{align*}
+    \dv{q}{t} = \text{taux en entrée}-\text{taux en sortie}
+\end{align*}
+
+On pose les conditions suivantes selon le contexte :
+\begin{align*}
+    C_e &= 0.15,\ D_e = 5 \\
+    D_s &= 6 \\
+    q(t_0) &= 0.004\cdot 100 = 0.4
+\end{align*}
+
+Le taux d'acide en entrée est :
+\begin{align*}
+    C_e\cdot D_e = 5\cdot0.15 = 0.75
+\end{align*}
+
+Le taux d'acide en sortie dépend de la quantité actuelle d'acide et du volume
+total. En particulier, la quantité d'acide en tout temps est $q$ alors que le
+volume total diminue de 1 litre à chaque minute. Le taux de sortie est donc :
+\begin{align*}
+    6\cdot\f{q}{100-t}
+\end{align*}
+
+L'équation différentielle devient :
+\begin{align*}
+    \dv{q}{t} = 0.75 - 6\cdot\f{q}{100-t}
+\end{align*}
+
+On résout avec la Ti :
+\begin{align*}
+    \desolve\prt{\dv{q}{t} = 0.75 - 6\cdot\f{q}{100-t}\text{ and }
+    q(0) = 0.4,t,q}
+\end{align*}
+
+On obtient :
+\begin{align*}
+    q(t) = 0.4 + 0.726t - 0.0219t^2 + 2.92\cdot10^{-4}t^3
+    -2.19\cdot10^{-6}t^4 + 8.76\cdot10^{-9}t^5
+    -1.46\cdot10^{-11}t^6
+\end{align*}
+
+b) La concentration atteint 10\% quand :
+\begin{align*}
+    \f{q(t)}{100-t} = 0.1
+\end{align*}
+
+On fait un solve avec la Ti :
+\begin{align*}
+    \solve\prt{\f{q(t)}{100-t} = 0.1,t}
+\end{align*}
+
+On trouve $t=19.29$ minutes.

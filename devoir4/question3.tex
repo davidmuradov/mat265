@@ -1,0 +1,44 @@
+\section*{4.2}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) L'EDO à résoudre est :
+\begin{align*}
+    s'' + 16s' + 64s = 0
+\end{align*}
+
+L'équation caractéristique est :
+\begin{align*}
+    m^2 + 16m + 64 = 0
+\end{align*}
+
+Le delta est :
+\begin{align*}
+    \Delta = 16^2 - 4\cdot64 = 0
+\end{align*}
+
+Les racines du polynôme sont :
+\begin{align*}
+    r_{1,2} = -\f{16}{2} = -8
+\end{align*}
+
+Étant donnée la racine réelle répétée, la solution est :
+\begin{align*}
+    s = C_1 t e^{-8t} +C_2 e^{-8t}
+\end{align*}
+
+On calcule $C_2$ :
+\begin{align*}
+    s(0) &= 0 = C_2\cdot 1\iff C_2 = 0 \\
+    \implies s(t) &= C_1 te^{-8t}
+\end{align*}
+
+On calcule $s'$ :
+\begin{align*}
+    s' = C_1\prt{e^{-8t} -8te^{-8t}}
+\end{align*}
+
+On calcule $C_1$ :
+\begin{align*}
+    s'(0) &= -4 = C_1\cdot 1\iff C_1 = -4 \\
+    \implies s(t) &= -4te^{-8t}
+\end{align*}
