@@ -1,0 +1,186 @@
+\section*{5.2}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) Soit la matrice :
+\begin{align*}
+    A =
+    \begin{pmatrix*}[r]
+	1&1\\
+	4&-2
+    \end{pmatrix*}
+\end{align*}
+
+On calcule les valeurs propres avec la Ti :
+\begin{align*}
+    \linalgcas\eigenvals(A)\implies\lambda_{1,2} = -3,2
+\end{align*}
+
+Le vecteur propre associé à $\lambda = -3$ est :
+\begin{align*}
+    v_1 = \begin{pmatrix*}[r]
+    	1\\-4
+    \end{pmatrix*}
+\end{align*}
+
+Le vecteur propre associé à $\lambda = 2$ est :
+\begin{align*}
+    v_2 = \begin{pmatrix*}[r]
+    	1\\1
+    \end{pmatrix*}
+\end{align*}
+
+Puisque les deux valeurs propres sont réelles et distinctes, 
+la solution au système d'équation est :
+\begin{align*}
+    \begin{pmatrix*}[r]
+        x_1\\x_2
+    \end{pmatrix*}
+    =
+    C_1
+    \begin{pmatrix*}[r]
+        1\\-4
+    \end{pmatrix*}
+    e^{-3t}
+    +C_2
+    \begin{pmatrix*}[r]
+        1\\1
+    \end{pmatrix*}
+    e^{2t}
+\end{align*}
+
+b) Soit la matrice :
+\begin{align*}
+    A =
+    \begin{pmatrix*}[r]
+	-1&-4\\
+	1&-1
+    \end{pmatrix*}
+\end{align*}
+
+On calcule les valeurs propres avec la Ti :
+\begin{align*}
+    \linalgcas\eigenvals(A)\implies\lambda_{1,2} = -1+2i,-1-2i
+\end{align*}
+
+Le vecteur propre associé à $\lambda = -1+2i$ est :
+\begin{align*}
+    v_1 = \begin{pmatrix*}[r]
+    	1\\-\f{i}{2}
+    \end{pmatrix*}
+\end{align*}
+
+Le vecteur propre associé à $\lambda = -1-2i$ est :
+\begin{align*}
+    v_2 = \begin{pmatrix*}[r]
+    	1\\\f{i}{2}
+    \end{pmatrix*}
+\end{align*}
+
+On pose aussi :
+\begin{align*}
+    v_{\lambda_1} = u_1 + iu_2 =
+    \begin{pmatrix*}[r]
+        1\\0
+    \end{pmatrix*}
+    +i
+    \begin{pmatrix*}[r]
+        0\\-\f{1}{2}
+    \end{pmatrix*}
+\end{align*}
+
+Puisque les deux valeurs propres sont complexes et distinctes, 
+la solution au système d'équation est :
+\begin{align*}
+    \begin{pmatrix*}[r]
+        x_1\\x_2
+    \end{pmatrix*}
+    =
+    C_1 e^{-t}\prt{
+	\begin{pmatrix*}[r]
+	    1\\0
+	\end{pmatrix*}\cos(2t)
+	+
+	\begin{pmatrix*}[r]
+	    0\\\f{1}{2}
+	\end{pmatrix*}\sin(2t)
+    }
+    +C_2 e^{-t}\prt{
+	\begin{pmatrix*}[r]
+	    1\\0
+	\end{pmatrix*}\sin(2t)
+	+
+	\begin{pmatrix*}[r]
+	    0\\-\f{1}{2}
+	\end{pmatrix*}\cos(2t)
+    }
+\end{align*}
+
+c) Soit la matrice :
+\begin{align*}
+    A =
+    \begin{pmatrix*}[r]
+	3&-4\\
+	1&-1
+    \end{pmatrix*}
+\end{align*}
+
+On calcule les valeurs propres avec la Ti :
+\begin{align*}
+    \linalgcas\eigenvals(A)\implies\lambda = 1
+\end{align*}
+
+Le vecteur propre associé à $\lambda = 1$ est :
+\begin{align*}
+    v_1 = \begin{pmatrix*}[r]
+    	1\\\f{1}{2}
+    \end{pmatrix*}
+\end{align*}
+
+On calcule $(A-\lambda I)$ :
+\begin{align*}
+    \begin{pmatrix*}[r]
+	3&-4\\
+	1&-1
+    \end{pmatrix*} -
+    \begin{pmatrix*}[r]
+	1&0\\
+	0&1
+    \end{pmatrix*} =
+    \begin{pmatrix*}[r]
+	2&-4\\
+	1&-2
+    \end{pmatrix*}
+\end{align*}
+
+Soit $w\in\mathbb{R}^2$. On résout le système d'équation suivant :
+\begin{align*}
+    2w_1 - 4w_2 &= 1 \\
+    w_1 - 2w_2 &= \f{1}{2}
+\end{align*}
+
+Un vecteur $w$ possible qui résout ce système est :
+\begin{align*}
+    w = (5/2, 1)
+\end{align*}
+
+Puisque la matrice n'admet qu'une seule valeur propre,
+la solution au système d'équation est :
+\begin{align*}
+    \begin{pmatrix*}[r]
+        x_1\\x_2
+    \end{pmatrix*} = 
+    C_1
+    \begin{pmatrix*}[r]
+        1\\\f{1}{2}
+    \end{pmatrix*}e^{t}
+    +C_2\prt{
+	t
+	\begin{pmatrix*}[r]
+	    1\\\f{1}{2}
+	\end{pmatrix*}
+	+
+	\begin{pmatrix*}[r]
+	    \f{5}{2}\\1
+	\end{pmatrix*}
+    }e^{t}
+\end{align*}

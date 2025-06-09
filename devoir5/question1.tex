@@ -1,0 +1,43 @@
+\section*{4.8}
+%\addcontentsline{toc}{section}{Question 1}
+
+c) On vérifie que la fonction $y_1 = x$ est solution de l'ÉDO :
+\begin{align*}
+    -\f{x}{x-1} + \f{1}{x-1}\cdot x &= 0 \\
+    0 &= 0
+\end{align*}
+
+On pose :
+\begin{align*}
+    P(x) = -\f{x}{x-1},\ Q(x) = \f{1}{x-1}
+\end{align*}
+
+Alors :
+\begin{align*}
+    v' = \f{e^{-\int{P(x)dx}}}{y^2} = \f{e^{\int{\frac{x}{x-1}dx}}}{x^2}
+\end{align*}
+
+On résout l'intégrale suivante :
+\begin{align*}
+    \int{\f{x}{x-1}\ dx}
+\end{align*}
+
+En intégrant par parties, le résultat de l'intégrale est :
+\begin{align*}
+    \int{\f{x}{x-1}\ dx} = \ln(x-1) + x - 1 + C
+\end{align*}
+
+On a donc :
+\begin{align*}
+    v' = \f{e^{\ln(x-1)+x-1+C}}{x^2} = \f{C_1(xe^x - e^x)}{x^2}
+\end{align*}
+
+En intégrant par parties encore, on trouve que :
+\begin{align*}
+    v = \prt{C_1 \f{e^x}{x} + C_2}
+\end{align*}
+
+La deuxième solution est alors :
+\begin{align*}
+    y_2 = vy_1 = \prt{C_1 \f{e^x}{x} + C_2}\cdot x = C_1 e^x + C_2 x
+\end{align*}

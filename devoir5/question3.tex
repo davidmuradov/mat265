@@ -1,0 +1,94 @@
+\section*{4.15}
+%\addcontentsline{toc}{section}{Question 1}
+
+f) L'ÉDO à résoudre est :
+\begin{align*}
+    y'' +6y' +9y = 4e^{-3x}\ln(x)
+\end{align*}
+
+Son équation caractéristique est :
+\begin{align*}
+    m^2 +6m +9 = 0
+\end{align*}
+
+Les racines sont :
+\begin{align*}
+    (m+3)^2 &= 0 \\
+    m &= -3
+\end{align*}
+
+La solution homogène est :
+\begin{align*}
+    y_h = C_1 xe^{-3x} +C_2 e^{-3x}
+\end{align*}
+
+On pose :
+\begin{align*}
+    y_p = L_1u_1 + L_2u_2
+\end{align*}
+
+Le système d'équation à résoudre est :
+\begin{align*}
+    &L_1' xe^{-3x} + L_2' e^{-3x} = 0 \\
+    &L_1'(e^{-3x}-3xe^{-3x}) + L_2'(-3e^{-3x}) = 4e^{-3x}\ln(x)
+\end{align*}
+
+En résolvant le système d'équations, on trouve que :
+\begin{align*}
+    L_1' &= 4\ln(x) \\
+    L_2' &= -4x\ln(x)
+\end{align*}
+
+En intégrant, on déduit que :
+\begin{align*}
+    L_1 &= 4(x\ln(x) -x) \\
+    L_2 &= -x^2(2\ln(x)-1)
+\end{align*}
+
+La solution générale est :
+\begin{align*}
+    y &= C_1 x e^{-3x} + C_2 e^{-3x} + 4(x\ln(x)-x)x e^{-3x} - x^2(2\ln(x)-1) e^{-3x} \\
+    &= C_1 x e^{-3x} + C_2 e^{-3x} +x^2 e^{-3x}(2\ln(x)-3)
+\end{align*}
+
+f) L'ÉDO à résoudre est :
+\begin{align*}
+    y'' +4y = \sin^2(x)
+\end{align*}
+
+Son équation caractéristique est :
+\begin{align*}
+    m^2 + 4 = 0
+\end{align*}
+
+Les racines sont :
+\begin{align*}
+    m = \pm2i
+\end{align*}
+
+La solution homogène est :
+\begin{align*}
+    y_h = C_1\cos(2x) + C_2\sin(2x)
+\end{align*}
+
+On pose :
+\begin{align*}
+    y_p = L_1u_1 + L_2u_2
+\end{align*}
+
+Le système d'équation à résoudre est :
+\begin{align*}
+    &L_1' \cos(2x) + L_2' \sin(2x) = 0 \\
+    &L_1'(-2\sin(2x)) + L_2'(2\cos(2x)) = \sin^2(x)
+\end{align*}
+
+Avec la Ti, on résout le système et on intègre. On trouve que :
+\begin{align*}
+    L_1 &= \f{\sin^4(x)}{4} \\
+    L_2 &= \f{-\sin(2x)\cos(2x) + 2(\sin(2x)-x)}{16}
+\end{align*}
+
+La solution générale est :
+\begin{align*}
+    y = C_1\cos(2x) + C_2\sin(2x) + L_1\cos(2x) + L_2\sin(2x)
+\end{align*}
