@@ -1,0 +1,37 @@
+\section*{5.10}
+%\addcontentsline{toc}{section}{Question 1}
+
+g) On tente de résoudre l'ÉDO suivante :
+\begin{align*}
+    y'' -4y' +4y = 25t^2 e^{-3t},\ y(0)=0,\ y'(0)=2
+\end{align*}
+
+On applique le Laplacien sur l'équation :
+\begin{align*}
+    \lap\prt{y'' -4y' +4y} = 25\lap\prt{t^2 e^{-3t}}
+\end{align*}
+
+Par la propriété de translation, nous avons que :
+\begin{align*}
+    \lap\prt{t^2 e^{-3t}} = \f{2}{(s+3)^3}
+\end{align*}
+
+On a donc :
+\begin{align*}
+    \lap\prt{y'' -4y' +4y} &= \f{50}{(s+3)^3} \\
+    s^2Y -sy(0) -y'(0) -4(sY-y(0)) +4Y &= \f{50}{(s+3)^3} \\
+    s^2Y -2 -4sY +4Y &= \f{50}{(s+3)^3} \\
+    Y\prt{s^2-4s+4} &= \f{50}{(s+3)^3} +2 \\
+    Y &= \f{50}{(s+3)^3(s^2-4s+4)} +\f{2}{s^2-4s+4} \\
+    Y &= \f{50}{(s+3)^3(s-2)^2} +\f{2}{s^2-4s+4}
+\end{align*}
+
+En prenant la transformée inverse et en utilisant un expand() avec la TI,
+on obtient l'équation suivante à résoudre :
+\begin{align*}
+    y &= \ilap\prt{\f{6}{25}\cdot \f{1}{s+3} + \f{4}{5}\cdot \f{1}{(s+3)^2}
+    + 2\cdot \f{1}{(s+3)^3} - \f{6}{25}\cdot \f{1}{s-2} +
+    \f{2}{5}\cdot \f{1}{(s-2)^2}} +2\ilap\prt{\f{1}{(s-2)^2}} \\
+    &= \f{6}{25}e^{-3t} + \f{4}{5}t e^{-3t} + t^2 e^{-3t} - \f{6}{25}e^{2t}
+    +\f{2}{5}t e^{2t} +2t e^{2t}
+\end{align*}

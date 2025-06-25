@@ -1,0 +1,32 @@
+\section*{5.8}
+%\addcontentsline{toc}{section}{Question 1}
+
+g) On tente de calculer la transformée inverse suivante :
+\begin{align*}
+    \mathcal{L}^{-1}\prt{\f{3s+1}{s^2-6s+13}}
+\end{align*}
+
+En séparant 13 en 9 + 4 et en utilisant les tableaux de transformée,
+on obtient :
+\begin{align*}
+    \mathcal{L}^{-1}\prt{\f{3s+1}{s^2-6s+9+4}} &=
+    \mathcal{L}^{-1}\prt{\f{3s+1}{(s-3)^2+2^2}} =
+    \mathcal{L}^{-1}\prt{\f{3s}{(s-3)^2+2^2} +\f{1}{(s-3)^2+2^2}} \\
+    &= 3\ilap\prt{\f{s}{(s-3)^2+2^2}} +\ilap\prt{\f{1}{(s-3)^2+2^2}} \\
+    &= 3\ilap\prt{\f{s-3+3}{(s-3)^2+2^2}} +\f{1}{2}e^{3t}\sin(2t) \\
+    &= 3\ilap\prt{\f{s-3}{(s-3)^2+2^2}} + 9\ilap\prt{\f{1}{(s-3)^2+2^2}} \\
+    &= 3 e^{3t}\cos(2t) +\f{9}{2}e^{3t}\sin(2t) +\f{1}{2}e^{3t}\sin(2t) \\
+    &= 3 e^{3t}\cos(2t) +5e^{3t}\sin(2t)
+\end{align*}
+
+h) On tente de calculer la transformée inverse suivante :
+\begin{gather*}
+    \ilap\prt{\f{s-1}{s^2+2s+2}-\f{1}{s^2+s+1}} =
+    \ilap\prt{\f{s-1}{(s+1)^2 + 1^2} -\f{1}{s^2+s+1}} \\
+    = \ilap\prt{\f{(s+1)-1-1}{(s+1)^2 + 1^2}
+    -\f{1}{\prt{s+\f{1}{2}}^2+\prt{\f{\sqrt{3}}{2}}^2}} \\
+    = \ilap\prt{\f{s+1}{(s+1)^2 + 1^2}} -2\ilap\prt{\f{1}{(s+1)^2 + 1^2}}
+    -\ilap\prt{\f{1}{\prt{s+\f{1}{2}}^2+\prt{\f{\sqrt{3}}{2}}^2}} \\
+    = e^{-t}\cos(t) -2 e^{-t}\sin(t)
+    -\f{2}{\sqrt{3}}e^{-t/2}\sin\prt{\f{\sqrt{3}}{2}t}
+\end{gather*}
