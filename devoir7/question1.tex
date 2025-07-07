@@ -1,0 +1,20 @@
+\section*{5.13}
+%\addcontentsline{toc}{section}{Question 1}
+
+d) On tente de calculer la transformée de Laplace de :
+\begin{align*}
+    f(t) = e^{2t}u(t-3) - e^{-3t}u(t-2)
+\end{align*}
+
+On applique la transformée :
+\begin{align*}
+    \lap\prt{f(t)} &= \lap\prt{e^{2t}u(t-3) - e^{-3t}u(t-2)} \\
+    &= e^{-3s}\lap\prt{e^{2(t+3)}}-e^{-2s}\lap\prt{e^{-3(t+2)}} \\
+    &= e^{6}e^{-3s}\lap\prt{e^{2t}}-e^{-6}e^{-2s}\lap\prt{e^{-3t}} \\
+    &= e^{-3(s-2)}\lap\prt{e^{2t}} - e^{-2(s+3)}\lap\prt{e^{-3t}}
+\end{align*}
+
+En utilisant les tables de transformée, on trouve donc :
+\begin{align*}
+    \lap\prt{f(t)} &= \f{e^{-3(s-2)}}{s-2}- \f{e^{-2(s+3)}}{s+3}
+\end{align*}

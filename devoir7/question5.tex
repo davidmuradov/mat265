@@ -1,0 +1,43 @@
+\section*{5.23}
+%\addcontentsline{toc}{section}{Question 1}
+
+d) On tente de résoudre le système d'équations suivant :
+\begin{align*}
+    x' - 3x - 6y &= 27t^2\quad x(0)=5,\ y(0)=-1 \\
+    x' + y' - 3y &= 5 e^{t}
+\end{align*}
+
+On applique la transformée de Laplace sur les deux équations. Sur la première,
+on obtient :
+\begin{align*}
+    \lap{\prt{x'-3x-6y}} &= 27 \lap{\prt{t^2}} \\
+    sX-x(0)-3X-6Y &= 27\cdot \f{2}{s^3} \\
+    sX-5-3X-6Y &= \f{54}{s^3}
+\end{align*}
+
+Sur la deuxième, on obtient :
+\begin{align*}
+    \lap{\prt{x'+y'-3y}} &= 5 \lap{\prt{e^{t}}} \\
+    sX-x(0)+sY-y(0)-3Y &= \f{5}{s-1} \\
+    sX-5+sY+1-3Y &= \f{5}{s-1}
+\end{align*}
+
+On résout le système avec un appel à la fonction solve de la Ti et on obtient
+les deux fonctions suivante :
+\begin{align*}
+    X = \f{5s^3+4s^2-24s+18}{s^3(s-1)},\ 
+    Y = -\f{s^2+6s-6}{s^2(s-1)}
+\end{align*}
+
+En faisant appel à la fonction expand de la Ti, on obtient les expressions
+simplifiées :
+\begin{align*}
+    X = \f{3}{s-1}+\f{2}{s}+\f{6}{s^2}-\f{18}{s^3},\ 
+    Y = -\f{1}{s-1}-\f{6}{s^2}
+\end{align*}
+
+En prenant la transformée inverse de $X$ et de $Y$, on obtient :
+\begin{align*}
+    x(t) &= 3 e^{t}+2+6t-9t^2 \\
+    y(t) &= -e^{t}-6t
+\end{align*}

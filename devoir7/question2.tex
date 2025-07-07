@@ -1,0 +1,25 @@
+\section*{5.14}
+%\addcontentsline{toc}{section}{Question 1}
+
+d) Selon la fonction définie par partie, on déduit qu'on aura besoin des
+fonctions échelons suivantes :
+\begin{align*}
+    u(t),\ u(t-2),\ u(t-4)
+\end{align*}
+
+Pour chaque morceau du domaine, on place en facteur des fonctions échelons
+l'opposé de la fonction précédente plus la fonction suivante, d'où :
+\begin{align*}
+    f(t) &= 5u(t) + (-5+(2+t))u(t-2) + (-(2+t) + (4-t^2))u(t-4) \\
+    &= 5u(t) + (t-3)u(t-2) + (2-t-t^2)u(t-4)
+\end{align*}
+
+On calcule la transformée de Laplace en utilisant les tables :
+\begin{align*}
+    \lap{\prt{f(t)}} &= \f{5}{s} + e^{-2s}\lap{\prt{t-3+2}}
+    + e^{-4s}\lap{\prt{-(t+4)^2 -(t+4) + 2}} \\
+    &= \f{5}{s} + e^{-2s}\lap{\prt{t-1}}
+    + e^{-4s}\lap{\prt{-t^2 - 9t -18}} \\
+    &= \f{5}{s} + e^{-2s}\prt{\f{1}{s^2} - \f{1}{s}} - e^{-4s}
+    \prt{\f{2}{s^3} + \f{9}{s^2} + \f{18}{s}}
+\end{align*}

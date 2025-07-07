@@ -1,0 +1,36 @@
+\section*{5.15}
+%\addcontentsline{toc}{section}{Question 1}
+
+b) On tente de calculer l'expression suivante :
+\begin{align*}
+    \lap^{-1}\prt{\f{e^{-5s}}{s^3} + \prt{\f{5s-1}{s^2+4}}e^{-4s}} = \lap^{-1}{\prt{f(t)}}
+\end{align*}
+
+On procède à quelques manipulations algébriques :
+\begin{align*}
+    \lap^{-1}{\prt{f(t)}}
+    &= \lap^{-1}\prt{\f{2e^{-5s}}{2s^3} + \prt{\f{5s-1}{s^2+4}}e^{-4s}} \\
+    &= \f{1}{2}\lap^{-1}\prt{e^{-5s}\f{2}{s^{2+1}}}
+    + \lap^{-1}\prt{\f{5s-1}{s^2+4}\cdot e^{-4s}} \\
+    &= \f{1}{2}(t-5)^2 u(t-5)
+    + \lap^{-1}\prt{e^{-4s}\prt{5\cdot\f{s}{s^2 + 2^2} -\f{1}{s^2 + 2^2}}}
+\end{align*}
+
+La transformée inverse de :
+\begin{align*}
+    5\cdot\f{s}{s^2 + 2^2} -\f{1}{s^2 + 2^2}
+\end{align*}
+
+nous donne la fonction inverse :
+\begin{align*}
+    F(s) = 5\cos(2t) - \f{1}{2}\sin(2t)
+\end{align*}
+
+d'où :
+\begin{align*}
+    \lap^{-1}{\prt{f(t)}} &=
+    \f{1}{2}(t-5)^2 u(t-5)
+    + \lap^{-1}\prt{e^{-4s}F(s)} \\
+    &= \f{1}{2}(t-5)^2 u(t-5) +
+    \prt{5\cos(2(t-4)) - \f{1}{2}\sin(2(t-4))}u(t-4)
+\end{align*}

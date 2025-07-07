@@ -1,0 +1,31 @@
+\section*{5.16}
+%\addcontentsline{toc}{section}{Question 1}
+
+h) On tente de résoudre l'ÉDO suivante :
+\begin{align*}
+    y'' + 2y' -3y = \delta(t-1) - \delta(t-2)\quad y(0)=2,\ y'(0)=-2
+\end{align*}
+
+On applique la transformée de Laplace :
+\begin{align*}
+    \lap{\prt{y'' + 2y' - 3y}} &= \lap{\prt{\delta(t-1) - \delta(t-2)}} \\
+    s^2Y - sy(0) - y'(0) + 2(sY - y(0)) - 3Y &= e^{-s}-e^{-2s} \\
+    s^2Y -2s + 2 +2sY -4 -3Y &= e^{-s}-e^{-2s} \\
+    Y(s^2 + 2s - 3) -2s -2 &= e^{-s}-e^{-2s} \\
+    Y &= \f{e^{-s}-e^{-2s} +2s +2}{s^2 + 2s - 3}
+\end{align*}
+
+En appelant la fonction expand de la Ti sur cette expression, on obtient :
+\begin{align*}
+    Y = -\f{1}{4}e^{-s}\f{1}{s+3}+\f{1}{4}e^{-s}\f{1}{s-1}
+    +\f{1}{4}e^{-2s}\f{1}{s+3}-\f{1}{4}e^{-2s}\f{1}{s-1}
+    +\f{1}{s+3} +\f{1}{s-1}
+\end{align*}
+
+En prenant la transformée inverse et en factorisant, on obtient :
+\begin{align*}
+    y(t) &= -\f{1}{4}u(t-1)e^{-3(t-1)}+\f{1}{4}u(t-1)e^{t-1}
+    +\f{1}{4}u(t-2)e^{-3(t-2)}-\f{1}{4}u(t-2)e^{t-2} + e^{-3t}+e^{t} \\
+    &= \f{1}{4}u(t-1)\prt{e^{t-1}-e^{-3t+3}} +\f{1}{4}u(t-2)\prt{e^{-3t+6}-e^{t-2}}
+    e^{-3t}+e^{t}
+\end{align*}
