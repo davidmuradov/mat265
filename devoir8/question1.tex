@@ -1,0 +1,66 @@
+\section*{6.3}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) On pose les conditions suivantes selon le problème :
+\begin{align*}
+    m = 20,\ s = 0.98,\ k = mg/s = 20\cdot9.8 / 0.98 = 200,\ y(0)=0.1,\ y'(0)=-1
+\end{align*}
+
+L'ÉDO à résoudre est :
+\begin{align*}
+    20y'' + 140y'+200y=0
+\end{align*}
+
+En utilisant la fonction ets\textunderscore specfunc\textbackslash solved sur la Ti
+sur l'ÉDO précédente, on trouve :
+\begin{gather*}
+    \specfunc \prt{20\cdot\dv{^2}{t^2}y(t) + 140\cdot \dv{}{t}y(t)
+    +200\cdot y(t)=0,\{y(t),0.1,-1\}} \\
+    \implies y(t) = \f{4}{15}e^{-5t}-\f{1}{6}e^{-2t}
+\end{gather*}
+
+Il s'agit d'un mouvement sur-amorti car :
+\begin{align*}
+    b^2 -4km = 140^2-4\cdot200\cdot20 = 3600 > 0
+\end{align*}
+
+b) L'objet repasse par le point d'équilibre lorsque $y(t_m) = 0$. On utilise la
+fonction solve de la Ti pour trouver le temps $t_m$ :
+\begin{gather*}
+    \solve\prt{0=\f{4}{15}e^{-5t}-\f{1}{6}e^{-2t},t} \\
+    \implies t_m = 0.1567
+\end{gather*}
+
+c) Maintenant, on pose $s = 0.098$. Dans ce cas, la constante de rappel est :
+\begin{align*}
+    k_2 = \f{20\cdot9.8}{0.098}=2000
+\end{align*}
+
+La nouvelle ÉDO à résoudre est :
+\begin{align*}
+    20y'' + 140y'+2000y=0
+\end{align*}
+
+En utilisant la fonction ets\textunderscore specfunc\textbackslash solved sur la Ti
+sur l'ÉDO précédente, on trouve :
+\begin{gather*}
+    \specfunc \prt{20\cdot\dv{^2}{t^2}y(t) + 140\cdot \dv{}{t}y(t)
+    +2000\cdot y(t)=0,\{y(t),0.1,-1\}} \\
+    \implies y(t) = e^{-7t/2}\prt{\f{1}{10}\cos \prt{\f{3\sqrt{39}}{2}t}
+    -\f{\sqrt{39}}{90}\sin \prt{\f{3\sqrt{39}}{2}t}}
+\end{gather*}
+
+Il s'agit d'un mouvement sous-amorti car :
+\begin{align*}
+    b^2 -4km = 140^2-4\cdot2000\cdot20 = -140\ 400 < 0
+\end{align*}
+
+d) Pour un amortissement critique, on cherche un $k$ tel que :
+\begin{align*}
+    b^2-4km = 0 \iff k = \f{b^2}{4m} = \f{140^2}{4\cdot 20} = 245
+\end{align*}
+
+À partir de cette donnée, on peut trouver l'étirement nécessaire :
+\begin{align*}
+    k = \f{mg}{s} \iff s = \f{mg}{k} = \f{20\cdot 9.8}{245} = 0.8
+\end{align*}

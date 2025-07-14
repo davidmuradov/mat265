@@ -1,0 +1,56 @@
+\section*{10.1}
+%\addcontentsline{toc}{section}{Question 1}
+
+a) On tente de résoudre l'équation suivante :
+\begin{align*}
+    u_x -2u_y = 0,\ u(0,y) = 2y
+\end{align*}
+
+On pose :
+\begin{align*}
+    a(x,y) = 1,\ b(x,y) = -2
+\end{align*}
+
+On cherche à trouver la solution de l'équation suivante :
+\begin{align*}
+    \dv{y}{x} = \f{b(x,y)}{a(x,y)} = -2 \implies y = -2x +C \iff y + 2x = C
+\end{align*}
+
+On pose :
+\begin{align*}
+    g(x,y) = y+2x
+\end{align*}
+
+d'où :
+\begin{gather*}
+    u(x,y) = f(g(x,y)) = f(y+2x)\\
+    u(0,y) = 2y = f(y + 0) = f(y)\\
+    u(x,y) = 2(y+2x) = 4x+2y
+\end{gather*}
+
+\section*{10.2}
+%\addcontentsline{toc}{section}{Question 1}
+
+Pour une fonction $F(t)$ de forme sinusoïdale, le régime permanent est :
+\begin{align*}
+    y_p = \f{F_0/m}{\sqrt{(\omega^2 -\omega_0^2)^2 +\f{b\omega^2}{m}}}
+    \cos\prt{\omega t + \delta}
+\end{align*}
+
+Soit la nouvelle fonction $G(t) = 2F(t)$, alors :
+\begin{align*}
+    G(t) = 2F_0 \cos\prt{\omega t}
+\end{align*}
+
+et son régime permanent est :
+\begin{align*}
+    y_{pg} = \f{2F_0/m}{\sqrt{(\omega^2 -\omega_0^2)^2 +\f{b\omega^2}{m}}}
+    \cos\prt{\omega t + \delta} = 2y_p
+\end{align*}
+
+On remarque que l'amplitude est deux fois plus grande. Cependant, ceci n'est
+vérifié que pour une excitation sinusoïdale, il faudrait passer par un calcul
+plus détaillé pour observer ce qui se produit pour une fonction $F(t)$
+quelconque (par exemple, en calculant la transformée de Laplace de l'ÉDO et
+en vérifiant si un régime transitoire et permanent existent et refaire le
+calcule pour $G(t) = 2F(t)$ pour produire des observations).

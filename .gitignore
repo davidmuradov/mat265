@@ -9,3 +9,7 @@ devoir1/EH_semaine_1A_1.pdf
 *.fls
 *.synctex*
 *.gz
+*.dpth
+*.md5
+*.auxlock
+*main-figure*
